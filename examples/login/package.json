@@ -10,6 +10,7 @@
     "express-session": ">= 1.6.1",
     "method-override": ">= 2.0.2",
     "morgan": ">= 1.1.1",
-    "passport": ">= 0.0.0"
+    "passport": ">= 0.0.0",
+    "passport-geocaching": ">= 0.0.0"
   }
 }

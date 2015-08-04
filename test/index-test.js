@@ -1,7 +1,7 @@
 var vows = require('vows');
 var assert = require('assert');
 var util = require('util');
-var geocaching = require('../lib/index');
+var geocaching = require(__dirname + '/../lib/index');
 //var geocaching = require('passport-geocaching');
 
 

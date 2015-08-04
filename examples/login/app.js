@@ -1,8 +1,8 @@
 var express = require('express')
   , passport = require('passport')
   , util = require('util')
-  //, GeocachingStrategy = require('passport-geocaching').Strategy
-  , GeocachingStrategy = require('../../lib/index').Strategy
+  , GeocachingStrategy = require('passport-geocaching').Strategy
+  //, GeocachingStrategy = require('../../lib/index').Strategy
   , morgan = require('morgan')
   , session = require('express-session')
   , bodyParser = require('body-parser')

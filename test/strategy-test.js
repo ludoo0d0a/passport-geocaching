@@ -1,9 +1,8 @@
 var vows = require('vows');
 var assert = require('assert');
 var util = require('util');
-//var GeocachingStrategy = require('passport-geocaching/strategy');
-var GeocachingStrategy = require('../lib/strategy');
-
+//var GeocachingStrategy = require('passport-geocaching').Strategy
+var GeocachingStrategy = require(__dirname + '/../lib/index').Strategy;
 
 vows.describe('GeocachingStrategy').addBatch({
   
