@@ -35,7 +35,7 @@
     "pkginfo": "^0.3.0"
   },
   "devDependencies": {
-    "vows": "0.6.x"
+    "vows": "0.8.x"
   },
   "engines": {
     "node": ">= 0.4.0"

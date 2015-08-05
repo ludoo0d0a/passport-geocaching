@@ -4,7 +4,7 @@ var util = require('util');
 //var GeocachingStrategy = require('passport-geocaching').Strategy
 var GeocachingStrategy = require(__dirname + '/../lib/index').Strategy;
 
-vows.describe('GeocachingStrategy').addBatch({
+var suite = vows.describe('GeocachingStrategy').addBatch({
   
   'strategy': {
     topic: function() {
@@ -29,9 +29,10 @@ vows.describe('GeocachingStrategy').addBatch({
       function() {});
       
       // mock
-      strategy._oauth.get = function(url, token, tokenSecret, callback) {
+      //strategy._oauth.get = function(url, token, tokenSecret, callback) {
+      strategy._oauth.post = function(url, token, tokenSecret, body, contenttype, callback) {
         var o = { 
-           status: {
+           Status: {
               StatusCode: 0,
               StatusMessage: "OK",
               ExceptionDetails: ""
@@ -102,7 +103,8 @@ vows.describe('GeocachingStrategy').addBatch({
       function() {});
       
       // mock
-      strategy._oauth.get = function(url, token, tokenSecret, callback) {
+      //strategy._oauth.get = function(url, token, tokenSecret, callback) {
+      strategy._oauth.post = function(url, token, tokenSecret, body, contenttype, callback) {
         callback(new Error('something went wrong'));
       }
       
@@ -133,4 +135,6 @@ vows.describe('GeocachingStrategy').addBatch({
     }
   }
 
-}).export(module);
+});
+suite.run();
+//suite.export(module);
