@@ -8,7 +8,8 @@ var express = require('express')
   , bodyParser = require('body-parser')
   , cookieParser = require('cookie-parser')
   , methodOverride = require('method-override')
-  , expressLayouts=require('express-ejs-layouts');
+  , expressLayouts=require('express-ejs-layouts')
+  , config1 = require('../../config1');
 
 var port = process.env.PORT || 3000;
 var GEOCACHING_APP_ID = "--insert-geocaching-app-id-here--"
@@ -16,6 +17,11 @@ var GEOCACHING_APP_SECRET = "--insert-geocaching-app-secret-here--";
 
 var callbackURL = 'http://localhost:'+port+'/auth/geocaching/callback';
 
+if (config1){
+  GEOCACHING_APP_ID = config1.consumer_key;
+  GEOCACHING_APP_SECRET = config1.consumer_secret ;
+  callbackURL = config1.callbackURL; 
+}
 // Passport session setup.
 //   To support persistent login sessions, Passport needs to be able to
 //   serialize users into and deserialize users out of the session.  Typically,
@@ -39,16 +45,16 @@ passport.deserializeUser(function(obj, done) {
 passport.use(new GeocachingStrategy({
     consumerKey: GEOCACHING_APP_ID,
     consumerSecret: GEOCACHING_APP_SECRET,
-    
-    //clientID: GEOCACHING_APP_ID,
-    //clientSecret: GEOCACHING_APP_SECRET,
-    
+
+    //You can skip profile request access
     //skipUserProfile: true,
     
     callbackURL: callbackURL
   },
   function(accessToken, refreshToken, profile, done) {
     
+    //returns accesstoken to be displayed
+    profile.token = accessToken;
     
     // asynchronous verification, for effect...
     process.nextTick(function () {
@@ -84,7 +90,6 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(__dirname + '/public'));
-
 
 app.get('/', function(req, res){
   res.render('index', { user: req.user });
