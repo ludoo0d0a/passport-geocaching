@@ -131,7 +131,9 @@ app.get('/logout', function(req, res){
   res.redirect('/');
 });
 
-app.listen(port);
+app.listen(port, function () {
+  console.log('Example app for passport-geocaching is listening');
+});
 
 
 // Simple route middleware to ensure user is authenticated.
