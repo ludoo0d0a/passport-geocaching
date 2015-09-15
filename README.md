@@ -57,6 +57,8 @@ application:
 
 For a complete, working example, refer to the [login example](https://github.com/ludoo0d0a/passport-geocaching/tree/master/examples/login).
 
+For a complete integration of this stratgy, look at [geocaching-api](https://github.com/ludoo0d0a/geocaching-api)
+
 ## Tests
 
     $ npm install --dev

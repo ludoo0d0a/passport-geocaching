@@ -18,8 +18,8 @@ var GEOCACHING_APP_SECRET = "--insert-geocaching-app-secret-here--";
 var callbackURL = 'http://localhost:'+port+'/auth/geocaching/callback';
 
 if (config1){
-  GEOCACHING_APP_ID = config1.consumer_key;
-  GEOCACHING_APP_SECRET = config1.consumer_secret ;
+  GEOCACHING_APP_ID = config1.consumerKey;
+  GEOCACHING_APP_SECRET = config1.consumerSecret ;
   callbackURL = config1.callbackURL; 
 }
 // Passport session setup.
