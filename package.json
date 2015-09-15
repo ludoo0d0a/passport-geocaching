@@ -1,6 +1,6 @@
 {
   "name": "passport-geocaching",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Geocaching authentication strategy for Passport.",
   "keywords": [
     "passport",
