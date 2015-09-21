@@ -14,5 +14,7 @@ node_modules/
 npm-debug.log
 
 # Git
-.git*
+.git
+
+config*.js
 
