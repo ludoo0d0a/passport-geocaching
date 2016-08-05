@@ -136,5 +136,9 @@ var suite = vows.describe('GeocachingStrategy').addBatch({
   }
 
 });
+
+//run as standalone
 suite.run();
+
+//run in "npm test"
 //suite.export(module);

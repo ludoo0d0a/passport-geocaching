@@ -1,6 +1,6 @@
 {
   "name": "passport-geocaching",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Geocaching authentication strategy for Passport.",
   "keywords": [
     "passport",
@@ -22,17 +22,12 @@
   "bugs": {
     "url": "http://github.com/ludoo0d0a/passport-geocaching/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://www.opensource.org/licenses/MIT"
-    }
-  ],
+  "license": "ISC", 
   "main": "./lib",
   "dependencies": {
     "passport-oauth": "^1.0.0",
     "passport-oauth2": "1.x.x",
-    "pkginfo": "^0.3.0"
+    "pkginfo": "^0.4.0"
   },
   "devDependencies": {
     "vows": "0.8.x"
