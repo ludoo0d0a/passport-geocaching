@@ -71,6 +71,6 @@ For a complete integration of this stratgy, look at [geocaching-api](https://git
 
 ## License
 
-[The MIT License](http://opensource.org/licenses/MIT)
+[The ISC License](http://opensource.org/licenses/ISC)
 
 Copyright (c) 2015 Ludovic Valente <[http://www.pitaso.com/](http://www.pitaso.com)>

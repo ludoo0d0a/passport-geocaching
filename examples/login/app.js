@@ -9,7 +9,7 @@ var express = require('express')
   , cookieParser = require('cookie-parser')
   , methodOverride = require('method-override')
   , expressLayouts=require('express-ejs-layouts')
-  , config1 = require('../../config1');
+  , config = require('../../config-api');
 
 var port = process.env.PORT || 3000;
 var GEOCACHING_APP_ID = "--insert-geocaching-app-id-here--"
@@ -17,10 +17,10 @@ var GEOCACHING_APP_SECRET = "--insert-geocaching-app-secret-here--";
 
 var callbackURL = 'http://localhost:'+port+'/auth/geocaching/callback';
 
-if (config1){
-  GEOCACHING_APP_ID = config1.consumerKey;
-  GEOCACHING_APP_SECRET = config1.consumerSecret ;
-  callbackURL = config1.callbackURL; 
+if (config){
+  GEOCACHING_APP_ID = config.consumerKey;
+  GEOCACHING_APP_SECRET = config.consumerSecret ;
+  callbackURL = config.callbackURL; 
 }
 // Passport session setup.
 //   To support persistent login sessions, Passport needs to be able to
