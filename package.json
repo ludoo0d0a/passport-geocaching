@@ -22,11 +22,11 @@
   "bugs": {
     "url": "http://github.com/ludoo0d0a/passport-geocaching/issues"
   },
-  "license": "ISC", 
+  "license": "ISC",
   "main": "./lib",
   "dependencies": {
     "passport-oauth": "^1.0.0",
-    "passport-oauth2": "1.x.x",
+    "passport-oauth2": "^1.5.0",
     "pkginfo": "^0.4.0"
   },
   "devDependencies": {
