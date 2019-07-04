@@ -18,8 +18,8 @@ var GEOCACHING_APP_SECRET = "--insert-geocaching-app-secret-here--";
 var callbackURL = 'http://localhost:'+port+'/auth/geocaching/callback';
 
 if (config){
-  GEOCACHING_APP_ID = config.consumerKey;
-  GEOCACHING_APP_SECRET = config.consumerSecret ;
+  GEOCACHING_APP_ID = config.clientID;
+  GEOCACHING_APP_SECRET = config.clientSecret ;
   callbackURL = config.callbackURL; 
 }
 // Passport session setup.
@@ -43,8 +43,10 @@ passport.deserializeUser(function(obj, done) {
 //   credentials (in this case, an accessToken, refreshToken, and Facebook
 //   profile), and invoke a callback with a user object.
 passport.use(new GeocachingStrategy({
-    consumerKey: GEOCACHING_APP_ID,
-    consumerSecret: GEOCACHING_APP_SECRET,
+    clientID: GEOCACHING_APP_ID,
+    clientSecret: GEOCACHING_APP_SECRET,
+    // clientID: GEOCACHING_APP_ID,
+    // consumerSecret: GEOCACHING_APP_SECRET,
 
     //You can skip profile request access
     //skipUserProfile: true,
@@ -132,7 +134,7 @@ app.get('/logout', function(req, res){
 });
 
 app.listen(port, function () {
-  console.log('Example app for passport-geocaching is listening');
+  console.log('Example app for passport-geocaching is listening on http://localhost:%d', port);
 });
 
 

@@ -9,8 +9,8 @@ var suite = vows.describe('GeocachingStrategy').addBatch({
   'strategy': {
     topic: function() {
       return new GeocachingStrategy({
-        consumerKey: 'ABC123',
-        consumerSecret: 'secret'
+        clientID: 'ABC123',
+        clientSecret: 'secret'
       },
       function() {});
     },
@@ -23,8 +23,8 @@ var suite = vows.describe('GeocachingStrategy').addBatch({
   'strategy when loading user profile': {
     topic: function() {
       var strategy = new GeocachingStrategy({
-        consumerKey: 'ABC123',
-        consumerSecret: 'secret'
+        clientID: 'ABC123',
+        clientSecret: 'secret'
       },
       function() {});
       
@@ -97,8 +97,8 @@ var suite = vows.describe('GeocachingStrategy').addBatch({
   'strategy when loading user profile and encountering an error': {
     topic: function() {
       var strategy = new GeocachingStrategy({
-        consumerKey: 'ABC123',
-        consumerSecret: 'secret'
+        clientID: 'ABC123',
+        clientSecret: 'secret'
       },
       function() {});
       
