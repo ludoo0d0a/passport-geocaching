@@ -45,6 +45,7 @@ passport.deserializeUser(function(obj, done) {
 passport.use(new GeocachingStrategy({
     consumerKey: GEOCACHING_APP_ID,
     consumerSecret: GEOCACHING_APP_SECRET,
+    env: config && config.env,
 
     //You can skip profile request access
     //skipUserProfile: true,
