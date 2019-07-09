@@ -15,7 +15,7 @@ var port = process.env.PORT || 3000;
 var GEOCACHING_APP_ID = "--insert-geocaching-app-id-here--"
 var GEOCACHING_APP_SECRET = "--insert-geocaching-app-secret-here--";
 
-var callbackURL = 'http://localhost:'+port+'/auth/geocaching/callback';
+var callbackURL = 'http://localhost:'+port+'/auth/callback';
 
 if (config){
   GEOCACHING_APP_ID = config.clientID;
@@ -109,7 +109,7 @@ app.get('/login', function(req, res){
 //   Use passport.authenticate() as route middleware to authenticate the
 //   request.  The first step in Facebook authentication will involve
 //   redirecting the user to geocaching.com.  After authorization, Facebook will
-//   redirect the user back to this application at /auth/geocaching/callback
+//   redirect the user back to this application at /auth/callback
 app.get('/auth/geocaching',
   passport.authenticate('geocaching'),
   function(req, res){
@@ -117,12 +117,16 @@ app.get('/auth/geocaching',
     // function will not be called.
   });
 
-// GET /auth/geocaching/callback
+// GET /auth/callback
 //   Use passport.authenticate() as route middleware to authenticate the
 //   request.  If authentication fails, the user will be redirected back to the
 //   login page.  Otherwise, the primary route function function will be called,
 //   which, in this example, will redirect the user to the home page.
-app.get('/auth/geocaching/callback', 
+//
+// Be ware tht this url should now be prooperl registered by Groundspeak. Please contact support to add this url.
+// A error message will occured if not properly set : The partner application did not give a secure redirect_uri. Please verify with the application the redirect uri is set up correctly and securely.
+//
+app.get('/auth/callback', 
   passport.authenticate('geocaching', { failureRedirect: '/login' }),
   function(req, res) {
     res.redirect('/');

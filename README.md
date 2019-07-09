@@ -26,7 +26,7 @@ specifying a consumer key, consumer secret, and callback URL.
     passport.use(new GeocachingStrategy({
         clientID: GEOCACHING_CONSUMER_KEY,
         clientSecret: GEOCACHING_SECRET_KEY,
-        callbackURL: "http://127.0.0.1:3000/auth/geocaching/callback"
+        callbackURL: "http://127.0.0.1:3000/auth/callback"
       },
       function(token, tokenSecret, profile, done) {
         User.findOrCreate({ geocachingId: profile.id, geocachingUsername: profile.username }, function (err, user) {
@@ -34,6 +34,12 @@ specifying a consumer key, consumer secret, and callback URL.
         });
       }
     ));
+
+#### Groundspeak registration
+
+You need API key to access [geocaching API](https://apidevelopers.geocaching.com/).
+And you need to register the callback urls, including in local mode with localhost. Please contact support to add them.
+
 
 #### Authenticate Requests
 
@@ -46,7 +52,7 @@ application:
     app.get('/auth/geocaching',
       passport.authenticate('geocaching'));
     
-    app.get('/auth/geocaching/callback', 
+    app.get('/auth/callback', 
       passport.authenticate('geocaching', { failureRedirect: '/login' }),
       function(req, res) {
         // Successful authentication, redirect home.
