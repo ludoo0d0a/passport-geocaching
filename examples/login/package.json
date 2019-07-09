@@ -1,6 +1,6 @@
 {
   "name": "passport-geocaching-examples-login",
-  "version": "0.0.2",
+  "version": "0.2.0",
   "scripts": {
     "start": "node app.js"
   },
@@ -14,6 +14,6 @@
     "method-override": "3.0.0",
     "morgan": "1.9.1",
     "passport": "0.4.0",
-    "passport-geocaching": "0.1.7"
+    "passport-geocaching": "0.2.0"
   }
 }
