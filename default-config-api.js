@@ -1,8 +1,10 @@
 module.exports = {
-    consumerKey: '123456789-ABCD-123456789-ABCD',
-    consumerSecret: '123456789-ABCD-123456789-ABCD',
-    callbackURL: 'https://localhost:3000/auth/geocaching/callback',
+    clientID: '123456789-ABCD-123456789-ABCD',
+    clientSecret: '123456789-ABCD-123456789-ABCD',
+    // consumerKey: '123456789-ABCD-123456789-ABCD',
+    // consumerSecret: '123456789-ABCD-123456789-ABCD',
+    callbackURL: 'https://localhost:3000/auth/callback',
     
     env: 'staging'
-    //env: 'live'
+    //env: 'prod'
 };

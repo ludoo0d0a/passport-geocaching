@@ -2,10 +2,10 @@
 Geocaching authentication strategy for Passport and Node.js.
 
 [Passport](http://passportjs.org/) strategy for authenticating with [Geocaching](http://www.geocaching.com/)
-using the OAuth 1.0a API.
+using the OAuth 2 API.
 
-This module lets you authenticate using Tumblr in your Node.js applications.
-By plugging into Passport, Tumblr authentication can be easily and
+This module lets you authenticate using Geocaching in your Node.js applications.
+By plugging into Passport, Geocaching authentication can be easily and
 unobtrusively integrated into any application or framework that supports
 [Connect](http://www.senchalabs.org/connect/)-style middleware, including
 [Express](http://expressjs.com/).
@@ -24,9 +24,9 @@ these credentials and calls `done` providing a user, as well as `options`
 specifying a consumer key, consumer secret, and callback URL.
 
     passport.use(new GeocachingStrategy({
-        consumerKey: GEOCACHING_CONSUMER_KEY,
-        consumerSecret: GEOCACHING_SECRET_KEY,
-        callbackURL: "http://127.0.0.1:3000/auth/geocaching/callback"
+        clientID: GEOCACHING_CONSUMER_KEY,
+        clientSecret: GEOCACHING_SECRET_KEY,
+        callbackURL: "http://127.0.0.1:3000/auth/callback"
       },
       function(token, tokenSecret, profile, done) {
         User.findOrCreate({ geocachingId: profile.id, geocachingUsername: profile.username }, function (err, user) {
@@ -34,6 +34,12 @@ specifying a consumer key, consumer secret, and callback URL.
         });
       }
     ));
+
+#### Groundspeak registration
+
+You need API key to access [geocaching API](https://apidevelopers.geocaching.com/).
+And you need to register the callback urls, including in local mode with localhost. Please contact support to add them.
+
 
 #### Authenticate Requests
 
@@ -46,7 +52,7 @@ application:
     app.get('/auth/geocaching',
       passport.authenticate('geocaching'));
     
-    app.get('/auth/geocaching/callback', 
+    app.get('/auth/callback', 
       passport.authenticate('geocaching', { failureRedirect: '/login' }),
       function(req, res) {
         // Successful authentication, redirect home.
@@ -61,8 +67,9 @@ For a complete integration of this stratgy, look at [geocaching-api](https://git
 
 ## Tests
 
-    $ npm install --dev
-    $ make test
+    $ cd examples/login
+    $ npm install
+    $ npm start
 
 
 ## Credits
@@ -73,4 +80,4 @@ For a complete integration of this stratgy, look at [geocaching-api](https://git
 
 [The ISC License](http://opensource.org/licenses/ISC)
 
-Copyright (c) 2015 Ludovic Valente <[http://www.pitaso.com/](http://www.pitaso.com)>
+Copyright (c) 2019 Ludovic Valente <[http://www.geoking.fr/](http://www.geoking.fr)>
