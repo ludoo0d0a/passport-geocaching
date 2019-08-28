@@ -1,9 +1,0 @@
-<% if (!user) { %>
-	<h2>Welcome! Please <a href="login">log in</a>.</h2>
-<% } else { %>
-	<h2>Hello, <%= user.username %> (<%= user.id %>) !!</h2>
-	<p><img src="<%= user.avatarUrl %>"></img></p>
-	<p>You found <%= user.findCount %> caches and hide <%= user.hideCount %>.</p>
-	<p>Favorite points : <%= user.favoritePoints %></p>
-	<%- user.profileText %>
-<% } %>
