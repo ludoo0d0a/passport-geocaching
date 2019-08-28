@@ -24,18 +24,30 @@
   },
   "license": "ISC",
   "main": "./lib",
+  "scripts": {
+    "build": "babel lib -d dist",
+    "build:sample": "babel examples/login/src -d examples/login/dist",
+    "prepack": "npm run build",
+    "test:mocha": "mocha --compilers js:babel-core/register --recursive",
+    "test": "NODE_PATH=lib node_modules/.bin/vows test/*-test.js --spec"
+  },
   "dependencies": {
+    "@babel/polyfill": "^7.4.4",
     "passport-oauth": "^1.0.0",
     "passport-oauth2": "^1.5.0",
-    "pkginfo": "^0.4.1"
+    "pkginfo": "^0.4.1",
+    "vows": "^0.8.2"
   },
   "devDependencies": {
-    "vows": "0.8.x"
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "expect.js": "~0.3.1",
+    "mocha": "^6.2.0",
+    "sinon": "7.4.1"
   },
   "engines": {
     "node": ">= 0.4.0"
-  },
-  "scripts": {
-    "test": "NODE_PATH=lib node_modules/.bin/vows test/*-test.js --spec"
   }
 }

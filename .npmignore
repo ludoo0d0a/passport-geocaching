@@ -4,6 +4,7 @@ doc/
 examples/
 test/
 *.txt
+dist/
 
 # Mac OS X
 .DS_Store
@@ -12,6 +13,7 @@ test/
 .npmignore
 node_modules/
 npm-debug.log
+package-lock.json
 
 # Git
 .git

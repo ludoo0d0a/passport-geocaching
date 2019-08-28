@@ -4,7 +4,6 @@ var util = require('util');
 var geocaching = require(__dirname + '/../lib/index');
 //var geocaching = require('passport-geocaching');
 
-
 vows.describe('passport-geocaching').addBatch({
 
     'should report a version': function (x) {
