@@ -23,7 +23,7 @@
     "url": "http://github.com/ludoo0d0a/passport-geocaching/issues"
   },
   "license": "ISC",
-  "main": "./lib",
+  "main": "./dist/index",
   "scripts": {
     "build": "babel lib -d dist",
     "build:sample": "babel examples/login/src -d examples/login/dist",

@@ -4,7 +4,7 @@ doc/
 examples/
 test/
 *.txt
-dist/
+lib/
 
 # Mac OS X
 .DS_Store
@@ -17,6 +17,4 @@ package-lock.json
 
 # Git
 .git
-
-config*.js
 
