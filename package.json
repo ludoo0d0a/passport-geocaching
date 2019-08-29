@@ -27,7 +27,7 @@
   "scripts": {
     "build": "babel lib -d dist",
     "build:sample": "babel examples/login/src -d examples/login/dist",
-    "prepack": "npm run build",
+    "prepublish": "npm run build",
     "test:mocha": "mocha --compilers js:babel-core/register --recursive",
     "test": "NODE_PATH=lib node_modules/.bin/vows test/*-test.js --spec"
   },
