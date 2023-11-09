@@ -1,0 +1,240 @@
+repo_name: ludoo0d0a/passport-geocaching
+report_id: 33e68fb5825f02c28428cdaa1e80bb85
+repo_type: Public
+timestamp: '2023-11-09T21:51:46+00:00'
+requested_by: ludoo0d0a
+provider: github
+branch: master
+detected_tools_count: 17
+tools:
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source: Repo Metadata
+- name: Babel
+  description: Use next generation JavaScript, today.
+  website_url: http://babeljs.io/
+  version: 7.5.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: JavaScript Compilers
+  image_url: https://img.stackshare.io/service/2739/-1wfGjNw.png
+  detection_source_url: package.json
+  detection_source: package.json
+  last_updated_by: LudoO
+  last_updated_on: 2019-08-28 16:50:49.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source: Repo Metadata
+- name: Mocha
+  description: Simple, flexible, fun javascript test framework for node.js &amp; the
+    browser
+  website_url: http://mochajs.org/
+  version: 6.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/832/mocha.png
+  detection_source_url: package.json
+  detection_source: package.json
+  last_updated_by: LudoO
+  last_updated_on: 2019-08-28 16:50:49.000000000 Z
+- name: SinonJS
+  description: Standalone test spies, stubs and mocks for JavaScript
+  website_url: http://sinonjs.org/
+  version: 7.4.1
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/3509/logo.png
+  detection_source_url: package.json
+  detection_source: package.json
+  last_updated_by: LudoO
+  last_updated_on: 2019-08-28 16:50:49.000000000 Z
+- name: Travis CI
+  description: A hosted continuous integration service for open source and private
+    projects
+  website_url: http://travis-ci.com/
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/460/Lu6cGu0z_400x400.png
+  detection_source: ".travis.yml"
+  last_updated_by: Ludovic Valente
+  last_updated_on: 2015-08-04 15:07:37.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source: package.json
+  last_updated_by: Ludovic Valente
+  last_updated_on: 2015-08-04 15:07:37.000000000 Z
+- name: "@babel/cli"
+  description: Babel command line
+  package_url: https://www.npmjs.com/@babel/cli
+  version: 7.5.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15848/default_b71c906aeda030a5e2f1fe40bf12a93be52404ab.png
+  detection_source_url: package.json
+  detection_source: package.json
+  last_updated_by: LudoO
+  last_updated_on: 2019-08-28 16:50:49.000000000 Z
+- name: "@babel/core"
+  description: Babel compiler core
+  package_url: https://www.npmjs.com/@babel/core
+  version: 7.5.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15810/default_004658cda9b38934f2871435e9dc15608c86e8be.png
+  detection_source_url: package.json
+  detection_source: package.json
+  last_updated_by: LudoO
+  last_updated_on: 2019-08-28 16:50:49.000000000 Z
+- name: "@babel/node"
+  description: Babel command line
+  package_url: https://www.npmjs.com/@babel/node
+  version: 7.5.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16153/default_ac04a744873b460c4ef30a7450ed0c83223640ab.png
+  detection_source_url: package.json
+  detection_source: package.json
+  last_updated_by: LudoO
+  last_updated_on: 2019-08-28 16:50:49.000000000 Z
+- name: "@babel/polyfill"
+  description: Provides polyfills necessary for a full ES2015+ environment
+  package_url: https://www.npmjs.com/@babel/polyfill
+  version: 7.4.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16039/default_b8a893285867e41b5fc4a7631d8fc2da834d778c.png
+  detection_source_url: package.json
+  detection_source: package.json
+  last_updated_by: LudoO
+  last_updated_on: 2019-08-28 16:50:49.000000000 Z
+- name: "@babel/preset-env"
+  description: A Babel preset for each environment
+  package_url: https://www.npmjs.com/@babel/preset-env
+  version: 7.5.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15819/default_98aa227f51aa9d787815ec3fd98d0ab2bfebbb91.png
+  detection_source_url: package.json
+  detection_source: package.json
+  last_updated_by: LudoO
+  last_updated_on: 2019-08-28 16:50:49.000000000 Z
+- name: expect.js
+  description: BDD style assertions for node and the browser
+  package_url: https://www.npmjs.com/expect.js
+  version: 0.3.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16029/default_261820f5687b4c88a3e8f95c71b5e8dccd34c1d7.png
+  detection_source_url: package.json
+  detection_source: package.json
+  last_updated_by: LudoO
+  last_updated_on: 2019-08-28 16:50:49.000000000 Z
+- name: passport-oauth
+  description: OAuth 1.0 and 2.0 authentication strategies for Passport
+  package_url: https://www.npmjs.com/passport-oauth
+  version: 1.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17672/default_4ba4cce198b4498f328ca26971f69b03cf49892a.png
+  detection_source_url: package.json
+  detection_source: package.json
+  last_updated_by: LudoO
+  last_updated_on: 2019-06-26 21:32:11.000000000 Z
+- name: passport-oauth2
+  description: OAuth 2.0 authentication strategy for Passport
+  package_url: https://www.npmjs.com/passport-oauth2
+  version: 1.5.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17962/default_72dbba22ca96f25f78f55f8ea5393222efca5494.png
+  detection_source_url: package.json
+  detection_source: package.json
+  last_updated_by: LudoO
+  last_updated_on: 2019-06-26 21:32:11.000000000 Z
+  vulnerabilities:
+  - name: Improper Access Control in passport-oauth2
+    cve_id: CVE-2021-41580
+    cve_url: https://github.com/advisories/GHSA-f794-r6xc-hf3v
+    detected_date: Sep 30
+    severity: moderate
+    first_patched: 1.6.1
+- name: pkginfo
+  description: An easy way to expose properties on a module from a package.json
+  package_url: https://www.npmjs.com/pkginfo
+  version: 0.4.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16798/default_6e51a44775c61dcb2888547ad406a2f0cf2c344e.png
+  detection_source_url: package.json
+  detection_source: package.json
+  last_updated_by: LudoO
+  last_updated_on: 2019-08-28 16:50:49.000000000 Z
+- name: vows
+  description: Asynchronous BDD &amp; continuous integration for node.js
+  package_url: https://www.npmjs.com/vows
+  version: 0.8.2
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16365/default_4cc3f31b8c64a6268fc123f0965a09d1b11180af.png
+  detection_source_url: package.json
+  detection_source: package.json
+  last_updated_by: LudoO
+  last_updated_on: 2019-08-28 16:50:49.000000000 Z
